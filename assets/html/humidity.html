@@ -11,42 +11,93 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <title>Latitude vs X</title>
 
 </head>
 
 <body>
-    <!--Navigation Bar-->
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Latitude vs X</a>
+        <a class="navbar-brand" href="../../index.html">City Latitude Analysis</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        <!-- Navigation bar dropdown -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Plots
+                    Plots
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Cloudiness</a>
-                      <a class="dropdown-item" href="#">Humidity</a>
-                      <a class="dropdown-item" href="#">Max Temperature</a>
-                      <a class="dropdown-item" href="#">Wind Speed</a>
+                    <!-- Visualization links -->
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                    <a class="dropdown-item" href="humidity.html">Humidity</a>
+                    <a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
+                    <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
                     </div>
                 </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Comparison</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Data</a>
-              </li>
+                 <!-- Comparison link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison</a>
+                </li>
+                 <!-- Data link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
             </ul>
         </div>
     </nav>
+    <!-- End of navigation bar -->
+
+    <!-- Start of left side content-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Latitude vs. Cloudiness</h3>
+                <hr>
+                    <a href="cloudiness.html">
+                    <img src="../../visualizations/latitude-cloudiness.png" alt="Cloudiness vs. Latitude Image">
+                    </a>
+                    <p><em>Cities close to a latitude of zero tend to have a significantly higher probability for cloudiness. In addition, cities with a latitude of -40 to -20 and 20 to 50, have a much lower probability for cloudiness. The correlation between latitude and cloudiness appears to be weak.</em></p>
+                <hr>
+            </div>
+            <!-- End of left side content-->
+
+            <!-- Start of right side content-->
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <h3>Visualizations</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 col-md-6">
+                            <a href="cloudiness.html">
+                            <img src="../../visualizations/latitude-cloudiness.png" width = 100% alt="Cloudiness vs. Latitude Image">
+                            </a>
+                        </div>
+                        <div class="col-3 col-md-6">
+                            <a href="humidity.html">
+                            <img src="../../visualizations/latitude-humidity.png" width = 100% alt="Humidity vs. Latitude Image">
+                            </a>
+                        </div>
+                        <div class="col-3 col-md-6">
+                            <a href="maxtemp.html">
+                            <img src="../../visualizations/latitude-temperature.png" width = 100% alt="Max Temperature vs. Latitude Image">
+                            </a>
+                        </div>
+                        <div class="col-3 col-md-6">
+                            <a href="windspeed.html">
+                            <img src="../../visualizations/latitude-windspeed.png" width = 100% alt="Wind Speed vs. Latitude Image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of left side content-->
 
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
